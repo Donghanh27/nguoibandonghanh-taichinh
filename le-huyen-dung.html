@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Master Coach Lê Huyền Dung · Người Giữ Lửa Hôn Nhân</title>
+<meta name="description" content="Coaching 1:1 chuyên sâu về hôn nhân và gia đình cho phụ nữ thành đạt. Hồi sinh cuộc hôn nhân tưởng đã nguội lạnh bằng Bánh Xe Hôn Nhân, Master NLP, EQ, Relationship Map và Timeline Therapy." />
+<meta property="og:title" content="Master Coach Lê Huyền Dung · Người Giữ Lửa Hôn Nhân" />
+<meta property="og:description" content="Đồng hành 1:1 cùng nữ lãnh đạo và phụ nữ thành đạt đang cô đơn trong chính mái ấm của mình." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================================
+   MASTER COACH LÊ HUYỀN DUNG — Landing Page
+   Phong cách: Tĩnh tại, tối giản, sang trọng, Á Đông hiện đại
+   ===================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-main:   #F8F3EA;   /* Nền chính - kem sáng */
+  --bg-cream:  #FFFDF8;   /* Kem sáng nhất */
+  --gold:      #C9A15B;   /* Vàng đồng */
+  --brown:     #6F4E37;   /* Nâu đất */
+  --ink:       #3A2A20;   /* Nâu chữ */
+  --navy:      #1F2E45;   /* Xanh navy nhấn */
+  --line:      #E6D8C2;   /* Viền */
+  --cta:       #B8860B;   /* CTA chính */
+  --cta-hover: #9C6B05;   /* CTA hover */
+  --ink-soft:  #5C4636;
+  --ink-faint: #8A7358;
+
+  --font-head: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-cta:  "Montserrat", system-ui, sans-serif;
+
+  --container: 1180px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 18px 50px -24px rgba(58,42,32,0.28);
+  --shadow-hover: 0 26px 70px -26px rgba(58,42,32,0.40);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg-main);
+  font-size: 17px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Hoa văn Á Đông mờ trên nền */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(201,161,91,0.08), transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba(111,78,55,0.07), transparent 45%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23C9A15B' stroke-width='0.6' opacity='0.14'%3E%3Cpath d='M70 15c15 15 15 40 0 55-15-15-15-40 0-55zM70 125c-15-15-15-40 0-55 15 15 15 40 0 55zM15 70c15-15 40-15 55 0-15 15-40 15-55 0zM125 70c-15 15-40 15-55 0 15-15 40-15 55 0z'/%3E%3Ccircle cx='70' cy='70' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 220px 220px;
+}
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; color: var(--ink); line-height: 1.18; letter-spacing: -0.01em; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.eyebrow {
+  font-family: var(--font-cta);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: inline-block;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-family: var(--font-cta);
+  font-weight: 600;
+  font-size: 15.5px;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-pill);
+  padding: 15px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  text-align: center;
+  line-height: 1.2;
+}
+.btn-primary {
+  background: var(--cta);
+  color: #FFFDF8;
+  box-shadow: 0 14px 34px -14px rgba(184,134,11,0.7);
+}
+.btn-primary:hover { background: var(--cta-hover); transform: translateY(-3px); box-shadow: 0 20px 42px -14px rgba(156,107,5,0.75); }
+.btn-ghost {
+  background: transparent;
+  color: var(--brown);
+  border: 1.5px solid var(--gold);
+}
+.btn-ghost:hover { background: rgba(201,161,91,0.12); transform: translateY(-3px); }
+.btn-navy { background: var(--navy); color: #F5EEE2; }
+.btn-navy:hover { background: #17233a; transform: translateY(-3px); }
+.btn-block { width: 100%; }
+
+/* ---------- Section rhythm ---------- */
+section { position: relative; z-index: 1; }
+.sec { padding: 92px 0; }
+.sec-head { text-align: center; max-width: 780px; margin: 0 auto 54px; }
+.sec-head h2 { font-size: clamp(30px, 4vw, 46px); margin: 14px 0 0; }
+.sec-head p { margin-top: 18px; color: var(--ink-soft); font-size: 18px; }
+
+/* ---------- Fade up ---------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ============================ HEADER ============================ */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,253,248,0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+.logo { display: flex; flex-direction: column; line-height: 1.15; }
+.logo b { font-family: var(--font-head); font-size: 19px; letter-spacing: 0.02em; color: var(--ink); font-weight: 700; }
+.logo span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-family: var(--font-cta); font-weight: 600; }
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a.navlink { font-size: 14.5px; color: var(--ink-soft); font-weight: 500; transition: color .2s; }
+.nav a.navlink:hover { color: var(--cta); }
+.header .btn { padding: 11px 22px; font-size: 14px; }
+.burger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.burger span { display: block; width: 24px; height: 2px; background: var(--brown); margin: 5px 0; border-radius: 2px; }
+
+/* ============================ HERO ============================ */
+.hero { padding: 66px 0 78px; overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(34px, 4.6vw, 54px); margin: 20px 0 0; }
+.hero .sub { margin-top: 22px; font-size: 19px; color: var(--brown); font-weight: 500; }
+.hero .desc { margin-top: 18px; color: var(--ink-soft); font-size: 16.5px; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+.trust-line { margin-top: 22px; font-size: 13.5px; color: var(--ink-faint); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.trust-line span { display: inline-flex; align-items: center; gap: 7px; }
+.trust-line span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+.hero-portrait { position: relative; }
+.portrait-frame {
+  position: relative; border-radius: 30px; overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(150deg, #efe4d0 0%, #e5d4bb 45%, #d8c4a5 100%);
+}
+.portrait-frame::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 24%, rgba(255,253,248,0.55), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='250' viewBox='0 0 200 250'%3E%3Cg fill='none' stroke='%236F4E37' stroke-width='1' opacity='0.10'%3E%3Cpath d='M100 40c26 26 26 70 0 96-26-26-26-70 0-96z'/%3E%3Cpath d='M100 210c-26-26-26-70 0-96 26 26 26 70 0 96z'/%3E%3Ccircle cx='100' cy='125' r='42'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover, 200px 250px; background-position: center; background-repeat: no-repeat, repeat;
+}
+.portrait-label {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 26px 24px 22px;
+  background: linear-gradient(to top, rgba(31,46,69,0.82), transparent);
+  color: #F5EEE2;
+}
+.portrait-label b { font-family: var(--font-head); font-size: 21px; display: block; }
+.portrait-label span { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #E7CE9A; font-family: var(--font-cta); }
+.portrait-silhouette {
+  position: absolute; z-index: 1; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 78%; height: 88%;
+}
+
+/* ============================ STATS ============================ */
+.stats { background: var(--navy); color: #F1E8D8; padding: 54px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.stat b { font-family: var(--font-head); font-size: clamp(30px, 3.4vw, 42px); color: #E7CE9A; display: block; line-height: 1.1; }
+.stat span { font-size: 14.5px; color: #cdbfa8; margin-top: 6px; display: block; }
+.stat + .stat { border-left: 1px solid rgba(231,206,154,0.18); }
+
+/* ============================ FORM ============================ */
+.form-sec { background: var(--bg-cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.form-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center; }
+.form-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 38px; box-shadow: var(--shadow-soft);
+}
+.form-intro h2 { font-size: clamp(28px, 3.4vw, 40px); margin-top: 14px; }
+.form-intro p { margin-top: 18px; color: var(--ink-soft); }
+.field { margin-bottom: 16px; }
+.field label { font-size: 13.5px; font-weight: 600; color: var(--brown); display: block; margin-bottom: 6px; font-family: var(--font-cta); }
+.field input, .field select, .field textarea {
+  width: 100%; font-family: var(--font-body); font-size: 15.5px; color: var(--ink);
+  background: var(--bg-main); border: 1px solid var(--line); border-radius: 14px;
+  padding: 13px 15px; transition: border .2s, box-shadow .2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,161,91,0.18); background: #fff;
+}
+.field textarea { resize: vertical; min-height: 84px; }
+.form-secure { font-size: 12.5px; color: var(--ink-faint); margin-top: 14px; text-align: center; }
+.form-ok { display: none; margin-top: 16px; padding: 14px 16px; border-radius: 14px; background: rgba(201,161,91,0.14); border: 1px solid var(--gold); color: var(--brown); font-size: 14.5px; text-align: center; }
+
+/* ============================ PAIN ============================ */
+.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.pain-card {
+  background: var(--bg-cream); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 30px; transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.pain-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--gold); }
+.pain-num { font-family: var(--font-head); font-size: 34px; color: var(--gold); font-weight: 600; line-height: 1; }
+.pain-card h3 { font-size: 20px; margin: 14px 0 10px; }
+.pain-card p { font-size: 15px; color: var(--ink-soft); }
+.center-cta { text-align: center; margin-top: 46px; }
+
+/* ============================ SOLUTION ============================ */
+.solution { background: var(--bg-cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.method-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 12px; }
+.method-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 30px 30px 30px 32px; position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+}
+.method-card::before { content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--gold); }
+.method-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.method-card h3 { font-size: 21px; margin-bottom: 10px; color: var(--navy); }
+.method-card p { font-size: 15px; color: var(--ink-soft); }
+
+/* ============================ VALUES ============================ */
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.value-card {
+  background: var(--bg-cream); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 32px; transition: transform .3s, box-shadow .3s;
+}
+.value-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.value-badge {
+  width: 46px; height: 46px; border-radius: 14px; background: rgba(201,161,91,0.16);
+  display: flex; align-items: center; justify-content: center; color: var(--cta);
+  font-family: var(--font-head); font-weight: 700; font-size: 20px; margin-bottom: 16px;
+}
+.value-card h3 { font-size: 19px; margin-bottom: 10px; }
+.value-card p { font-size: 14.5px; color: var(--ink-soft); }
+
+/* ============================ BONUS ============================ */
+.bonus { background: var(--navy); color: #F1E8D8; }
+.bonus .sec-head h2 { color: #FBF4E6; }
+.bonus-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.bonus-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: rgba(255,253,248,0.05); border: 1px solid rgba(231,206,154,0.2);
+  border-radius: 18px; padding: 20px 22px; transition: background .3s, transform .3s;
+}
+.bonus-item:hover { background: rgba(255,253,248,0.09); transform: translateY(-3px); }
+.bonus-ico { flex-shrink: 0; width: 40px; height: 40px; }
+.bonus-ico svg { width: 40px; height: 40px; stroke: var(--gold); }
+.bonus-item h4 { color: #FBF4E6; font-size: 16px; font-family: var(--font-body); font-weight: 600; }
+.bonus-item .price { font-family: var(--font-cta); font-size: 13.5px; color: #E7CE9A; margin-top: 4px; display: block; }
+.bonus-total {
+  text-align: center; margin-top: 34px; font-size: 18px; color: #FBF4E6;
+}
+.bonus-total b { color: #E7CE9A; font-family: var(--font-head); font-size: 26px; }
+
+/* ============================ TESTIMONIALS ============================ */
+.testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.testi-card {
+  background: var(--bg-cream); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 32px; transition: transform .3s, box-shadow .3s;
+}
+.testi-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+.testi-quote { font-size: 15.5px; color: var(--ink-soft); font-style: italic; }
+.testi-quote::before { content: "“"; font-family: var(--font-head); font-size: 46px; color: var(--gold); line-height: 0; vertical-align: -18px; margin-right: 4px; }
+.testi-person { display: flex; align-items: center; gap: 14px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
+.avatar {
+  width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold), var(--brown));
+  color: #FFFDF8; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-weight: 700; font-size: 20px;
+}
+.testi-person b { font-size: 15.5px; display: block; }
+.testi-person span { font-size: 13px; color: var(--ink-faint); }
+
+/* ============================ ABOUT ============================ */
+.about { background: var(--bg-cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 54px; align-items: start; }
+.about-portrait {
+  border-radius: 26px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+  aspect-ratio: 3/4; position: relative;
+  background: linear-gradient(160deg, #e9dcc5, #d6c1a1);
+}
+.about-portrait::after {
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(255,253,248,0.5), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='240' viewBox='0 0 180 240'%3E%3Cg fill='none' stroke='%236F4E37' stroke-width='1' opacity='0.10'%3E%3Ccircle cx='90' cy='110' r='40'/%3E%3Cpath d='M90 30c24 24 24 62 0 86-24-24-24-62 0-86z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover, 180px 240px;
+}
+.about-sub { font-family: var(--font-cta); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.about h2 { font-size: clamp(28px, 3.6vw, 42px); margin: 12px 0 22px; }
+.about p { color: var(--ink-soft); margin-bottom: 16px; font-size: 16px; }
+.about .lead { font-family: var(--font-head); font-style: italic; font-size: 21px; color: var(--brown); font-weight: 500; }
+.achieve { list-style: none; margin: 24px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+.achieve li { font-size: 14.5px; color: var(--ink-soft); padding-left: 26px; position: relative; }
+.achieve li::before { content: ""; position: absolute; left: 0; top: 9px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--gold); }
+.about-quote {
+  margin-top: 20px; padding: 22px 26px; border-left: 4px solid var(--gold);
+  background: rgba(201,161,91,0.10); border-radius: 0 16px 16px 0;
+  font-family: var(--font-head); font-style: italic; font-size: 18px; color: var(--brown);
+}
+
+/* ============================ AUDIENCE ============================ */
+.aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.aud-card {
+  background: var(--bg-cream); border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 30px; transition: transform .3s, box-shadow .3s;
+}
+.aud-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.aud-card h3 { font-size: 18px; margin-bottom: 10px; color: var(--navy); }
+.aud-card p { font-size: 14.5px; color: var(--ink-soft); }
+.aud-note {
+  margin-top: 34px; text-align: center; max-width: 820px; margin-left: auto; margin-right: auto;
+  font-size: 15.5px; color: var(--ink-soft); font-style: italic;
+  padding: 22px 26px; background: var(--bg-cream); border: 1px dashed var(--gold); border-radius: 18px;
+}
+
+/* ============================ PRICING ============================ */
+.pricing { background: var(--bg-cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.price-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+.price-card {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-card);
+  padding: 32px 26px; display: flex; flex-direction: column; position: relative;
+  transition: transform .3s, box-shadow .3s;
+}
+.price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.price-card.featured { border: 2px solid var(--cta); box-shadow: var(--shadow-hover); }
+.price-card.premium { border: 2px solid var(--gold); background: linear-gradient(180deg, #fffdf8, #f7efe1); }
+.price-badge {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  font-family: var(--font-cta); font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em;
+  padding: 6px 16px; border-radius: var(--radius-pill); white-space: nowrap; text-transform: uppercase;
+}
+.badge-hot { background: var(--cta); color: #FFFDF8; }
+.badge-year { background: var(--gold); color: #3A2A20; }
+.price-tier { font-family: var(--font-cta); font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.price-card h3 { font-size: 20px; margin: 8px 0 14px; min-height: 52px; }
+.price-amount { font-family: var(--font-head); font-size: 34px; font-weight: 700; color: var(--navy); }
+.price-desc { font-size: 13.5px; color: var(--ink-faint); margin: 12px 0 18px; }
+.price-feats { list-style: none; margin: 0 0 24px; flex-grow: 1; }
+.price-feats li { font-size: 13.5px; color: var(--ink-soft); padding: 7px 0 7px 24px; position: relative; border-bottom: 1px solid #f2e9d8; }
+.price-feats li::before {
+  content: ""; position: absolute; left: 0; top: 13px; width: 12px; height: 7px;
+  border-left: 2px solid var(--cta); border-bottom: 2px solid var(--cta);
+  transform: rotate(-45deg);
+}
+.price-card .btn { margin-top: auto; }
+
+/* ============================ COMPARE ============================ */
+.compare-wrap { overflow-x: auto; border-radius: var(--radius-card); border: 1px solid var(--line); box-shadow: var(--shadow-soft); }
+table.compare { width: 100%; border-collapse: collapse; min-width: 760px; background: #fff; font-size: 14px; }
+table.compare th, table.compare td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line); }
+table.compare thead th { background: var(--navy); color: #F1E8D8; font-family: var(--font-cta); font-weight: 600; font-size: 13.5px; letter-spacing: 0.02em; position: sticky; top: 0; }
+table.compare thead th:first-child { border-top-left-radius: 0; }
+table.compare tbody th { font-weight: 600; color: var(--brown); background: var(--bg-cream); font-family: var(--font-body); }
+table.compare tbody tr:nth-child(even) td, table.compare tbody tr:nth-child(even) th { background: rgba(248,243,234,0.5); }
+table.compare td.hl { color: var(--cta); font-weight: 600; }
+.compare-note { margin-top: 24px; text-align: center; font-size: 15px; color: var(--ink-soft); max-width: 900px; margin-left: auto; margin-right: auto; }
+
+/* ============================ COMMIT ============================ */
+.commit { background: var(--navy); color: #F1E8D8; }
+.commit .sec-head h2 { color: #FBF4E6; }
+.commit-list { max-width: 760px; margin: 0 auto; list-style: none; }
+.commit-list li { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(231,206,154,0.16); font-size: 16px; color: #E4D8C4; }
+.commit-check { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.commit-final { text-align: center; margin-top: 40px; font-family: var(--font-head); font-style: italic; font-size: clamp(20px, 2.6vw, 27px); color: #E7CE9A; max-width: 820px; margin-left: auto; margin-right: auto; }
+
+/* ============================ FAQ ============================ */
+.faq-wrap { max-width: 820px; margin: 0 auto; }
+.faq-item { background: var(--bg-cream); border: 1px solid var(--line); border-radius: 18px; margin-bottom: 14px; overflow: hidden; transition: border-color .3s; }
+.faq-item.open { border-color: var(--gold); }
+.faq-q { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 22px 26px; font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.faq-icon { flex-shrink: 0; width: 26px; height: 26px; position: relative; transition: transform .3s; }
+.faq-icon::before, .faq-icon::after { content: ""; position: absolute; background: var(--gold); border-radius: 2px; }
+.faq-icon::before { top: 12px; left: 4px; right: 4px; height: 2px; }
+.faq-icon::after { left: 12px; top: 4px; bottom: 4px; width: 2px; transition: opacity .3s; }
+.faq-item.open .faq-icon::after { opacity: 0; }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+.faq-a p { padding: 0 26px 24px; color: var(--ink-soft); font-size: 15.5px; }
+
+/* ============================ FINAL CTA ============================ */
+.final-cta { text-align: center; background: linear-gradient(165deg, var(--bg-cream), #f2e6d2); border-top: 1px solid var(--line); }
+.final-cta h2 { font-size: clamp(30px, 4.2vw, 48px); max-width: 860px; margin: 16px auto 0; }
+.final-cta p { max-width: 700px; margin: 22px auto 0; color: var(--ink-soft); font-size: 18px; }
+.final-cta .hero-cta { justify-content: center; margin-top: 32px; }
+
+/* ============================ FOOTER ============================ */
+.footer { background: #2a1f18; color: #d9cbb6; padding: 60px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+.footer .logo b { color: #FBF4E6; }
+.footer p { font-size: 14.5px; color: #b8a88f; margin-top: 16px; }
+.footer h4 { color: #E7CE9A; font-size: 14px; font-family: var(--font-cta); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+.footer a.fl { display: block; font-size: 14.5px; color: #c9bba2; margin-bottom: 9px; transition: color .2s; }
+.footer a.fl:hover { color: #E7CE9A; }
+.footer .tagline { font-family: var(--font-head); font-style: italic; color: var(--gold); font-size: 15px; margin-top: 8px; }
+.footer-bottom { border-top: 1px solid rgba(231,206,154,0.14); margin-top: 44px; padding-top: 24px; font-size: 12.5px; color: #9d8d75; line-height: 1.7; }
+
+/* ============================ ZALO FLOAT ============================ */
+.zalo-float {
+  position: fixed; right: 20px; bottom: 92px; z-index: 90;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #0068FF; color: #fff; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 30px -8px rgba(0,104,255,0.6); font-family: var(--font-cta); font-weight: 700; font-size: 13px;
+  transition: transform .25s;
+  animation: zpulse 2.4s infinite;
+}
+.zalo-float:hover { transform: scale(1.08); }
+@keyframes zpulse { 0%,100%{ box-shadow: 0 10px 30px -8px rgba(0,104,255,0.55);} 50%{ box-shadow: 0 10px 40px -6px rgba(0,104,255,0.85);} }
+
+/* ============================ MOBILE STICKY CTA ============================ */
+.msticky {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 95;
+  display: none; gap: 10px; padding: 10px 14px;
+  background: rgba(255,253,248,0.95); backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line); box-shadow: 0 -8px 30px -14px rgba(58,42,32,0.35);
+}
+.msticky .btn { flex: 1; padding: 13px 10px; font-size: 14px; }
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width: 980px) {
+  .hero-grid, .form-grid, .about-grid { grid-template-columns: 1fr; }
+  .hero-portrait { max-width: 440px; margin: 0 auto; order: -1; }
+  .about-portrait { max-width: 380px; margin: 0 auto 10px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 10px; }
+  .stat:nth-child(3) { border-left: none; }
+  .stat + .stat { border-left: 1px solid rgba(231,206,154,0.18); }
+  .stat:nth-child(odd) { border-left: none; }
+  .pain-grid, .value-grid, .aud-grid { grid-template-columns: repeat(2, 1fr); }
+  .method-grid, .bonus-list, .testi-grid { grid-template-columns: 1fr; }
+  .price-grid { grid-template-columns: repeat(2, 1fr); }
+  .achieve { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .sec { padding: 62px 0; }
+  .nav { display: none; }
+  .header .btn { display: none; }
+  .burger { display: block; }
+  .pain-grid, .value-grid, .aud-grid, .price-grid, .stats-grid { grid-template-columns: 1fr; }
+  .stat + .stat { border-left: none; border-top: 1px solid rgba(231,206,154,0.18); padding-top: 24px; }
+  .msticky { display: flex; }
+  .zalo-float { bottom: 82px; }
+  body { padding-bottom: 68px; }
+  .form-card { padding: 26px; }
+  .hero { padding: 40px 0 54px; }
+}
+
+/* Mobile nav drawer */
+.mobile-nav { display: none; flex-direction: column; gap: 4px; padding: 14px 24px 20px; background: var(--bg-cream); border-bottom: 1px solid var(--line); }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { padding: 11px 0; font-size: 15px; color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+.mobile-nav .btn { margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <b>LÊ HUYỀN DUNG</b>
+      <span>Người Giữ Lửa Hôn Nhân</span>
+    </a>
+    <nav class="nav">
+      <a class="navlink" href="#form">Tra cứu</a>
+      <a class="navlink" href="#values">Giá trị nhận được</a>
+      <a class="navlink" href="#about">Về Coach</a>
+      <a class="navlink" href="#pricing">Gói Coaching</a>
+      <a class="navlink" href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#form">Đặt lịch 30 phút</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#form">Tra cứu</a>
+    <a href="#values">Giá trị nhận được</a>
+    <a href="#about">Về Coach</a>
+    <a href="#pricing">Gói Coaching</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-primary" href="#form">Đặt lịch tư vấn miễn phí</a>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Coaching 1:1 chuyên sâu về hôn nhân và gia đình</span>
+      <h1>Hồi sinh cuộc hôn nhân tưởng đã nguội lạnh, để bạn vừa giữ được sự nghiệp rực rỡ vừa có một tổ ấm bình yên.</h1>
+      <p class="sub">Bạn không thiếu bản lĩnh. Bạn chỉ đang thiếu một tấm bản đồ đủ rõ để biết hôn nhân đang rạn ở đâu, vì sao hai người ngày càng xa nhau, và cần bắt đầu hàn gắn từ điểm nào trước.</p>
+      <p class="desc">Master Coach Lê Huyền Dung đồng hành 1:1 cùng nữ lãnh đạo, chủ doanh nghiệp và phụ nữ thành đạt đang cô đơn trong chính mái ấm của mình. Bằng Bánh Xe Hôn Nhân, Master NLP, EQ, Relationship Map và Timeline Therapy, bạn sẽ nhìn lại toàn bộ hệ vận hành gia đình, gỡ đúng nút thắt và từng bước khôi phục kết nối với chồng, con.</p>
+      <div class="hero-cta">
+        <a href="#form" class="btn btn-primary">Đặt lịch tư vấn miễn phí 30 phút</a>
+        <a href="#pricing" class="btn btn-ghost">Xem các gói Coaching</a>
+      </div>
+      <div class="trust-line">
+        <span>Riêng tư</span><span>Bảo mật</span><span>Đồng hành cá nhân hóa</span><span>Phản hồi qua Zalo trong 24h</span>
+      </div>
+    </div>
+    <div class="hero-portrait reveal in">
+      <div class="portrait-frame">
+        <svg class="portrait-silhouette" viewBox="0 0 200 260" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="pg1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#5a4632"/><stop offset="1" stop-color="#3a2a20"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="100" cy="72" rx="34" ry="40" fill="#c9a883"/>
+          <path d="M60 62 q-6 -34 40 -40 q46 6 40 40 q4 26 -14 30 q0 -30 -26 -30 q-26 0 -26 30 q-18 -4 -14 -30z" fill="url(#pg1)"/>
+          <path d="M40 260 q0 -86 60 -96 q60 10 60 96z" fill="#f3ece0"/>
+          <path d="M100 164 q-24 4 -34 22 l0 74 l68 0 l0 -74 q-10 -18 -34 -22z" fill="#e7dcc9"/>
+          <path d="M100 168 l0 92 M82 176 q18 20 36 0" fill="none" stroke="#cbb692" stroke-width="1.4"/>
+        </svg>
+        <div class="portrait-label">
+          <b>Master Coach Lê Huyền Dung</b>
+          <span>Bản lĩnh trong dịu dàng</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATS ============================ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><b>25 năm</b><span>quản trị thực chiến</span></div>
+    <div class="stat reveal"><b>10.000+ giờ</b><span>coaching chuyên sâu</span></div>
+    <div class="stat reveal"><b>1.700+</b><span>khách hàng đã đồng hành</span></div>
+    <div class="stat reveal"><b>1.000+ tổ ấm</b><span>được góp phần hồi sinh</span></div>
+  </div>
+</section>
+
+<!-- ============================ FORM ============================ -->
+<section class="sec form-sec" id="form">
+  <div class="container form-grid">
+    <div class="form-intro reveal">
+      <span class="eyebrow">Bước đầu tiên để nhìn lại hôn nhân của bạn</span>
+      <h2>Đặt Lịch Tư Vấn Miễn Phí 30 Phút</h2>
+      <p>Chỉ cần vài thông tin cơ bản, đội ngũ của Huyền Dung sẽ liên hệ để xác nhận lịch phù hợp. Buổi tư vấn đầu tiên giúp bạn nhìn rõ vấn đề hiện tại và biết mình có phù hợp với lộ trình coaching 1:1 hay không.</p>
+    </div>
+    <div class="form-card reveal">
+      <form id="bookForm" novalidate>
+        <div class="field">
+          <label for="f-name">Họ và tên</label>
+          <input id="f-name" name="name" type="text" placeholder="Nhập họ và tên của bạn" required />
+        </div>
+        <div class="field">
+          <label for="f-phone">Số điện thoại / Zalo</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="Ví dụ: 0377 266 588" required />
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" placeholder="email@cua-ban.com" />
+        </div>
+        <div class="field">
+          <label for="f-interest">Bạn đang quan tâm điều gì nhất?</label>
+          <select id="f-interest" name="interest">
+            <option value="">— Chọn nội dung quan tâm —</option>
+            <option>Kết nối lại với chồng</option>
+            <option>Kết nối lại với con</option>
+            <option>Tháo gỡ mâu thuẫn, cãi vã</option>
+            <option>Cân bằng sự nghiệp và gia đình</option>
+            <option>Cân nhắc ly thân / ly hôn</option>
+            <option>Tìm hiểu lộ trình coaching 1:1</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-status">Tình trạng hiện tại của bạn</label>
+          <textarea id="f-status" name="status" placeholder="Chia sẻ ngắn gọn điều đang khiến bạn trăn trở nhất..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Đặt lịch tư vấn miễn phí</button>
+        <p class="form-secure">Thông tin của bạn được bảo mật tuyệt đối và chỉ dùng cho mục đích tư vấn.</p>
+        <div class="form-ok" id="formOk">Cảm ơn bạn. Thông tin đã được ghi nhận, đội ngũ của Huyền Dung sẽ liên hệ qua Zalo trong 24h.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAIN ============================ -->
+<section class="sec" id="pain">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Có phải bạn đang gặp?</span>
+      <h2>Có Phải Bạn Đang Sống Trong Một Cuộc Hôn Nhân Đủ Đầy Bên Ngoài Nhưng Lạnh Lẽo Bên Trong?</h2>
+      <p>Bạn không thật sự yếu đuối. Có thể bạn đã mạnh mẽ quá lâu, gồng gánh quá nhiều, nhưng chưa có một không gian đủ an toàn để nhìn lại điều gì đang âm thầm làm hôn nhân nguội lạnh.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal"><div class="pain-num">01</div><h3>Không nói chuyện được với chồng</h3><p>Bạn điều hành cả một đội ngũ được, xử lý hàng trăm việc khó mỗi ngày, nhưng về nhà lại không thể nói với chồng một câu cho thật sự chạm lòng.</p></div>
+      <div class="pain-card reveal"><div class="pain-num">02</div><h3>Cô đơn trong chính căn nhà của mình</h3><p>Hai giờ sáng, giữa một căn nhà đầy đủ tiện nghi, bạn vẫn thấy trống rỗng. Có chồng, có con, có sự nghiệp, nhưng bên trong lại lạnh và mỏi mệt.</p></div>
+      <div class="pain-card reveal"><div class="pain-num">03</div><h3>Bên ngoài vẫn đẹp, bên trong đã nguội</h3><p>Người ngoài nhìn vào thấy bạn có tất cả. Chỉ mình bạn biết những bữa cơm đã ít tiếng cười, những cuộc trò chuyện ngày càng ngắn, và sự thân mật đã vơi đi từ lâu.</p></div>
+      <div class="pain-card reveal"><div class="pain-num">04</div><h3>Con cái ngày càng khó kết nối</h3><p>Con cắm mặt vào điện thoại, phản ứng mạnh, không muốn nghe. Bạn thương con nhưng càng nói, con càng xa.</p></div>
+      <div class="pain-card reveal"><div class="pain-num">05</div><h3>Bạn đã thử nhiều cách nhưng không bền</h3><p>Bạn từng nhịn, từng làm lành, từng rủ chồng đi du lịch, từng đọc sách, từng tự nhủ mình phải bao dung hơn. Nhưng sau vài ngày, mọi thứ lại trở về như cũ.</p></div>
+      <div class="pain-card reveal"><div class="pain-num">06</div><h3>Bạn sợ một ngày mình phải buông tay</h3><p>Không phải vì hết thương, mà vì quá mệt. Bạn sợ cuộc hôn nhân này sẽ âm thầm đi đến ly thân, ly hôn hoặc sống chung trong im lặng đến hết đời.</p></div>
+    </div>
+    <div class="center-cta reveal"><a href="#form" class="btn btn-primary">Tôi muốn nhìn lại hôn nhân của mình</a></div>
+  </div>
+</section>
+
+<!-- ============================ SOLUTION ============================ -->
+<section class="sec solution" id="solution">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Không đổ lỗi · Không cam chịu · Nhìn đúng gốc rễ</span>
+      <h2>Hôn Nhân Không Thể Hồi Sinh Bằng Sự Nhịn Nhục. Hôn Nhân Cần Được Tái Cấu Trúc Từ Gốc.</h2>
+      <p>Nhiều người phụ nữ thành đạt có thể quản trị doanh nghiệp, đội nhóm, tài chính và chiến lược. Nhưng khi bước vào gia đình, họ lại rơi vào một hệ vận hành rất khác: cảm xúc, tổn thương cũ, nhu cầu không được nói ra, thói quen giao tiếp và vai trò trong hôn nhân.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-card reveal"><h3>Bánh Xe Hôn Nhân</h3><p>Bản đồ 8 nan hoa giúp bạn nhìn rõ hôn nhân đang mạnh ở đâu, yếu ở đâu, nan hoa nào đang rạn, nan hoa nào đã gần như gãy.</p></div>
+      <div class="method-card reveal"><h3>Master NLP và EQ</h3><p>Giúp gỡ những phản ứng bản năng, nút thắt cảm xúc và thói quen giao tiếp cũ khiến bạn, chồng và con ngày càng xa nhau.</p></div>
+      <div class="method-card reveal"><h3>Relationship Map & Map for Success</h3><p>Giúp giải mã sự khác biệt giữa các thành viên trong gia đình, chuyển từ tương khắc sang tương hợp.</p></div>
+      <div class="method-card reveal"><h3>Timeline Therapy</h3><p>Quy trình trị liệu cảm xúc giúp xử lý những cảm xúc mắc kẹt, tổn thương cũ và các ký ức cảm xúc đang ảnh hưởng đến cách bạn phản ứng trong hiện tại.</p></div>
+    </div>
+    <div class="center-cta reveal"><a href="#pricing" class="btn btn-primary">Khám phá lộ trình Coaching 1:1</a></div>
+  </div>
+</section>
+
+<!-- ============================ VALUES ============================ -->
+<section class="sec" id="values">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">6 giá trị bạn sẽ nhận được</span>
+      <h2>Đây Không Chỉ Là Một Buổi Tư Vấn Hôn Nhân. Đây Là Hành Trình Đọc Lại Toàn Bộ Hệ Vận Hành Gia Đình Của Bạn.</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-card reveal"><div class="value-badge">01</div><h3>Tổng Quan Bánh Xe Hôn Nhân</h3><p>Bạn sẽ nhìn lại 8 nan hoa quan trọng: kết nối cảm xúc, giao tiếp, niềm tin, vai trò, tài chính, thân mật, nuôi dạy con và định hướng chung.</p></div>
+      <div class="value-card reveal"><div class="value-badge">02</div><h3>Nhận Diện Gốc Rễ Mất Kết Nối</h3><p>Bạn sẽ hiểu vì sao hai người từng thương nhau lại dần trở nên xa cách. Vấn đề có thể không nằm ở một cuộc cãi vã, mà ở nhiều lớp cảm xúc chưa được gọi tên.</p></div>
+      <div class="value-card reveal"><div class="value-badge">03</div><h3>Giải Mã Sự Khác Biệt Vợ – Chồng</h3><p>Vì sao cùng một sự việc, bạn thấy tổn thương còn chồng lại thấy bị kiểm soát. Vì sao bạn muốn nói để kết nối, còn anh ấy lại im lặng để tránh xung đột.</p></div>
+      <div class="value-card reveal"><div class="value-badge">04</div><h3>Khôi Phục Vai Trò Người Vợ, Người Mẹ</h3><p>Bạn sẽ học cách trở về với sự mềm mại có bản lĩnh, biết lắng nghe mà không đánh mất chính mình, biết nói điều mình cần mà không biến thành trách móc.</p></div>
+      <div class="value-card reveal"><div class="value-badge">05</div><h3>Lộ Trình Kết Nối Lại Với Con</h3><p>Bạn sẽ có góc nhìn rõ hơn về con theo Score Model và Relationship Map, từ đó biết cách nói chuyện, đặt câu hỏi và đồng hành để con bớt phòng vệ.</p></div>
+      <div class="value-card reveal"><div class="value-badge">06</div><h3>Kế Hoạch Hành Động 7 / 21 / 90 Ngày</h3><p>Bạn rời buổi coaching với một lộ trình cụ thể: 7 ngày ổn định nhận thức, 21 ngày điều chỉnh giao tiếp, 90 ngày tạo chuyển biến rõ hơn trong gia đình.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BONUS ============================ -->
+<section class="sec bonus" id="bonus">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="color:#E7CE9A">Quà tặng đặc biệt</span>
+      <h2>6 Bonus Tặng Kèm Miễn Phí Khi Đăng Ký Coaching 1:1</h2>
+    </div>
+    <div class="bonus-list">
+      <div class="bonus-item reveal"><div class="bonus-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 2h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><div><h4>File PDF Bánh Xe Hôn Nhân Cá Nhân</h4><span class="price">Trị giá 499.000đ</span></div></div>
+      <div class="bonus-item reveal"><div class="bonus-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><h4>Bài Tự Đánh Giá Hôn Nhân Đang Ở Đâu</h4><span class="price">Trị giá 399.000đ</span></div></div>
+      <div class="bonus-item reveal"><div class="bonus-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 4h11a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4v13a2.5 2.5 0 0 0-2.5-2.5H4"/></svg></div><div><h4>Mini Ebook Người Giữ Lửa Hôn Nhân</h4><span class="price">Trị giá 399.000đ</span></div></div>
+      <div class="bonus-item reveal"><div class="bonus-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div><div><h4>Bộ Câu Hỏi Coaching 21 Ngày Kết Nối Lại</h4><span class="price">Trị giá 599.000đ</span></div></div>
+      <div class="bonus-item reveal"><div class="bonus-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div><div><h4>Mini Guide 5 Tầng Tắc Nghẽn Hôn Nhân</h4><span class="price">Trị giá 699.000đ</span></div></div>
+      <div class="bonus-item reveal"><div class="bonus-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h3M8 18h6"/></svg></div><div><h4>Mẫu Kế Hoạch 7 / 21 / 90 Ngày Hồi Sinh Kết Nối</h4><span class="price">Trị giá 499.000đ</span></div></div>
+    </div>
+    <p class="bonus-total reveal">Tổng giá trị bonus: <b>3.094.000đ</b><br>Tặng kèm miễn phí cho khách hàng đăng ký trong tháng này.</p>
+  </div>
+</section>
+
+<!-- ============================ TESTIMONIALS ============================ -->
+<section class="sec" id="testimonials">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Bằng chứng xã hội</span>
+      <h2>Những Chuyển Hóa Có Thật Từ Khách Hàng</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <p class="testi-quote">Trước đây em loay hoay mãi vì không hiểu được nhu cầu thật của chồng, con và cả đội ngũ nhân sự. Sau khi được chị Huyền Dung khai mở bằng Map for Success và Relationship Map, em bắt đầu hiểu chính mình sâu hơn, và hiểu vì sao mỗi người lại phản ứng một kiểu. Giờ em biết lắng nghe, quan sát và kết nối nhẹ nhàng hơn.</p>
+        <div class="testi-person"><div class="avatar">HG</div><div><b>Huỳnh Thị Hà Giang, 38 tuổi</b><span>Trưởng phòng kinh doanh công ty du lịch</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="testi-quote">Sau phiên coach, em nhận ra mình chưa thật sự tập trung vào nền tảng cốt lõi của bản thân. Chị Huyền Dung giúp em nhìn lại mình một cách thẳng thắn mà vẫn rất an toàn.</p>
+        <div class="testi-person"><div class="avatar">TH</div><div><b>Trần Thị Hạnh, 40 tuổi</b><span>Giám đốc quản lý nhân sự công ty Đài Loan</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="testi-quote">Trước đây tôi chỉ mong vợ thay đổi để theo kịp mình. Nhờ công cụ Relationship Map, lần đầu tôi thật sự hiểu vợ đang cần gì và nhìn cuộc sống ra sao.</p>
+        <div class="testi-person"><div class="avatar">ND</div><div><b>Nguyễn Văn Diễn, 45 tuổi</b><span>Lãnh đạo công ty Care for Việt Nam</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <p class="testi-quote">Sau phiên coach cùng chị Huyền Dung, chính con tôi nói rằng con thích cách chị nói chuyện và dẫn dắt. Tôi hiểu rằng giữa cha mẹ và con cái, tình yêu thôi là chưa đủ, mình còn cần kỹ năng lắng nghe và thấu hiểu cảm xúc của con.</p>
+        <div class="testi-person"><div class="avatar">TL</div><div><b>Thùy Linh, 46 tuổi</b><span>Chủ doanh nghiệp</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="sec about" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="about-portrait">
+        <svg style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:80%;height:90%;z-index:1" viewBox="0 0 200 260" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+          <ellipse cx="100" cy="70" rx="33" ry="39" fill="#c9a883"/>
+          <path d="M62 60 q-6 -32 38 -38 q44 6 38 38 q4 24 -13 28 q0 -28 -25 -28 q-25 0 -25 28 q-17 -4 -13 -28z" fill="#4a3826"/>
+          <path d="M42 260 q0 -84 58 -94 q58 10 58 94z" fill="#efe7d9"/>
+          <path d="M100 162 q-22 4 -32 20 l0 78 l64 0 l0 -78 q-10 -16 -32 -20z" fill="#ddd0ba"/>
+        </svg>
+        <div class="portrait-label" style="position:absolute;left:0;right:0;bottom:0;z-index:2;padding:24px 22px;background:linear-gradient(to top,rgba(31,46,69,0.8),transparent);color:#F5EEE2">
+          <b style="font-family:var(--font-head);font-size:19px;display:block">Lê Huyền Dung</b>
+          <span style="font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#E7CE9A;font-family:var(--font-cta)">Master Coach · Life Coach Quốc Tế</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="about-sub">Về Master Coach Lê Huyền Dung</span>
+      <h2>Người Giữ Lửa Hôn Nhân · Bản Lĩnh Trong Dịu Dàng</h2>
+      <p class="lead">Tôi từng có đủ mọi thứ của một người lãnh đạo thành đạt, trừ một mái ấm bình yên.</p>
+      <p>Suốt 11 năm, tôi sống trong sự im lặng nghẹt thở ngay trong chính ngôi nhà của mình. Bên ngoài, tôi vẫn là người phụ nữ mạnh mẽ, làm việc, điều hành, gánh vác và được nhiều người tin tưởng. Nhưng bên trong, tôi hiểu rất rõ cảm giác một người vợ cô đơn trong chính cuộc hôn nhân của mình.</p>
+      <p>Tôi đã từng nhịn, từng cố, từng tự hỏi mình sai ở đâu. Cho đến khi tôi bắt đầu học cách nhìn hôn nhân như một hệ vận hành cần được thấu hiểu và tái cấu trúc, thay vì chỉ là nơi để chịu đựng, trách móc hoặc hy vọng người kia tự thay đổi.</p>
+      <p>Hôm nay, tôi đồng hành cùng những người phụ nữ giỏi việc nước nhưng đang bế tắc việc nhà. Những người có thể điều hành công ty, dẫn dắt đội nhóm, tạo ra thu nhập tốt, nhưng lại thấy bất lực trước khoảng cách với chồng con.</p>
+      <ul class="achieve">
+        <li>25 năm quản trị thực chiến</li>
+        <li>11 năm lãnh đạo trong tập đoàn Hàn Quốc</li>
+        <li>14 năm điều hành doanh nghiệp riêng</li>
+        <li>10.000+ giờ coaching</li>
+        <li>1.700+ khách hàng đã đồng hành</li>
+        <li>1.000+ tổ ấm được góp phần hồi sinh</li>
+        <li>10 cặp đôi từng ly hôn quay lại kết hôn lần nữa</li>
+        <li>Master NLP · EQ Master · TLT Timeline Therapy</li>
+        <li>Chứng chỉ Life Coach quốc tế</li>
+        <li>Cử nhân Quản trị Kinh doanh — ĐH Kinh tế</li>
+      </ul>
+      <div class="about-quote">Hiểu hôn nhân không phải để đổ lỗi cho ai. Hiểu hôn nhân là để biết mình cần bắt đầu yêu thương lại từ đâu.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ AUDIENCE ============================ -->
+<section class="sec" id="audience">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Chương trình phù hợp với ai</span>
+      <h2>Hành Trình Này Được Thiết Kế Dành Riêng Cho Bạn</h2>
+    </div>
+    <div class="aud-grid">
+      <div class="aud-card reveal"><h3>Nữ lãnh đạo, chủ doanh nghiệp, quản lý cấp cao</h3><p>Bạn được nể trọng ngoài xã hội, có khả năng ra quyết định và chịu trách nhiệm lớn, nhưng khi về nhà lại thấy mình nhỏ bé, tổn thương hoặc bất lực trong chính mối quan hệ thân nhất.</p></div>
+      <div class="aud-card reveal"><h3>Người vợ đang mất kết nối với chồng</h3><p>Hai người vẫn sống chung, vẫn làm tròn trách nhiệm, nhưng không còn những cuộc trò chuyện thật, không còn sự dịu dàng và không còn cảm giác được nhìn thấy.</p></div>
+      <div class="aud-card reveal"><h3>Người mẹ lo lắng cho con</h3><p>Bạn thấy con ngày càng khó nói chuyện, dễ phản ứng, lệ thuộc điện thoại hoặc xa cách cha mẹ. Bạn muốn hiểu con thay vì chỉ kiểm soát con.</p></div>
+      <div class="aud-card reveal"><h3>Phụ nữ thành đạt nhưng kiệt sức bên trong</h3><p>Bạn có sự nghiệp, thu nhập, hình ảnh và trách nhiệm, nhưng lại thiếu một nơi để được lắng nghe, được yếu mềm và được nhìn lại chính mình một cách an toàn.</p></div>
+      <div class="aud-card reveal"><h3>Người muốn cứu hôn nhân nhưng chưa biết bắt đầu từ đâu</h3><p>Bạn chưa muốn buông tay. Nhưng bạn cũng không muốn tiếp tục sống trong lạnh nhạt, trách móc và cô đơn. Bạn cần một bản đồ rõ ràng hơn.</p></div>
+      <div class="aud-card reveal" style="display:flex;align-items:center;justify-content:center;background:var(--navy);color:#E7CE9A;text-align:center"><p style="font-family:var(--font-head);font-style:italic;font-size:19px;color:#E7CE9A">Dành cho người sẵn sàng nhìn lại mình, học cách giao tiếp mới và tái cấu trúc hôn nhân bằng sự trưởng thành.</p></div>
+    </div>
+    <p class="aud-note reveal">Chương trình này không dành cho người muốn một lời phán xét đúng sai hoặc muốn ép người kia thay đổi ngay lập tức. Đây là hành trình dành cho người sẵn sàng nhìn lại mình, học cách giao tiếp mới và tái cấu trúc hôn nhân bằng sự trưởng thành.</p>
+  </div>
+</section>
+
+<!-- ============================ PRICING ============================ -->
+<section class="sec pricing" id="pricing">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Bảng giá 4 gói coaching</span>
+      <h2>Chọn Lộ Trình Đồng Hành Phù Hợp Với Bạn</h2>
+      <p>Từ việc tự nhìn lại hôn nhân đến hành trình đồng hành sâu 1 năm cùng Timeline Therapy.</p>
+    </div>
+    <div class="price-grid">
+      <!-- BASIC -->
+      <div class="price-card reveal">
+        <span class="price-tier">Gói Basic</span>
+        <h3>Bánh Xe Hôn Nhân Cá Nhân</h3>
+        <div class="price-amount">399K</div>
+        <p class="price-desc">Phù hợp nếu bạn muốn tự nhìn lại tình trạng hôn nhân hiện tại và biết những điểm nào đang cần chú ý.</p>
+        <ul class="price-feats">
+          <li>File PDF Bánh Xe Hôn Nhân cá nhân</li>
+          <li>Bài tự đánh giá 8 nan hoa hôn nhân</li>
+          <li>Tổng quan điểm mạnh, điểm yếu mối quan hệ</li>
+          <li>Gợi ý nan hoa cần ưu tiên tái cấu trúc</li>
+          <li>Checklist kết nối lại với chồng con</li>
+          <li>Mini ebook Người Giữ Lửa Hôn Nhân</li>
+          <li>Gợi ý kế hoạch hành động 7 ngày đầu tiên</li>
+        </ul>
+        <a href="#form" class="btn btn-ghost btn-block">Nhận Bản Đồ Hôn Nhân Của Tôi</a>
+      </div>
+      <!-- PLUS -->
+      <div class="price-card featured reveal">
+        <span class="price-badge badge-hot">Được chọn nhiều nhất</span>
+        <span class="price-tier">Gói Plus</span>
+        <h3>Coaching Chuyên Sâu 1:1</h3>
+        <div class="price-amount">1.999K</div>
+        <p class="price-desc">Một phiên riêng tư 120 phút để nhìn rõ gốc rễ vấn đề, tháo gỡ điểm nghẽn và xây lộ trình hành động cụ thể.</p>
+        <ul class="price-feats">
+          <li>Toàn bộ quyền lợi Gói BASIC</li>
+          <li>Coaching 1:1 riêng tư 120 phút</li>
+          <li>Phân tích Bánh Xe Hôn Nhân theo 8 nan hoa</li>
+          <li>Nhận diện gốc rễ mất kết nối với chồng con</li>
+          <li>Ứng dụng Master NLP và EQ tháo gỡ cảm xúc</li>
+          <li>Giải mã tương hợp qua Relationship Map</li>
+          <li>Quy trình giao tiếp không biến thành cãi vã</li>
+          <li>Kế hoạch hành động 7 / 21 / 90 ngày</li>
+          <li>Tặng 6 bonus trị giá 3.094.000đ</li>
+          <li>Có ghi lại buổi coaching để xem lại</li>
+        </ul>
+        <a href="#form" class="btn btn-primary btn-block">Đặt Lịch Coaching 1:1</a>
+      </div>
+      <!-- PRO -->
+      <div class="price-card reveal">
+        <span class="price-tier">Gói Pro</span>
+        <h3>Đồng Hành Chuyển Hóa 90 Ngày</h3>
+        <div class="price-amount">5.000.000đ</div>
+        <p class="price-desc">Được đồng hành đủ sâu trong 90 ngày để thực hành, điều chỉnh và tạo chuyển biến thật.</p>
+        <ul class="price-feats">
+          <li>Toàn bộ quyền lợi Gói PLUS</li>
+          <li>Thêm 1 bản đồ cá nhân hóa chuyên sâu</li>
+          <li>Đồng hành 90 ngày</li>
+          <li>03 phiên coaching 1:1 riêng tư</li>
+          <li>Theo dõi tiến trình thay đổi sau từng phiên</li>
+          <li>Điều chỉnh kế hoạch theo thực tế gia đình</li>
+          <li>Relationship Map hiểu sâu sự tương hợp</li>
+          <li>Hỗ trợ xây lại thói quen giao tiếp</li>
+          <li>Tặng đầy đủ 6 bonus trị giá 3.094.000đ</li>
+          <li>Ưu tiên lịch coaching trong 90 ngày</li>
+        </ul>
+        <a href="#form" class="btn btn-ghost btn-block">Đăng Ký Gói PRO 90 Ngày</a>
+      </div>
+      <!-- PREMIUM -->
+      <div class="price-card premium reveal">
+        <span class="price-badge badge-year">Đồng hành 1 năm</span>
+        <span class="price-tier">Gói Premium</span>
+        <h3>Đồng Hành Hồi Sinh Hôn Nhân 1 Năm</h3>
+        <div class="price-amount">25.000.000đ<span style="font-size:15px;color:var(--ink-faint);font-family:var(--font-body)">/năm</span></div>
+        <p class="price-desc">Đồng hành dài hạn để tái cấu trúc hôn nhân, kết nối lại với con, giữ vững sự nghiệp và bản lĩnh trong dịu dàng.</p>
+        <ul class="price-feats">
+          <li>Toàn bộ quyền lợi Gói PRO</li>
+          <li>Đồng hành cá nhân hóa trong 1 năm</li>
+          <li>Coaching định kỳ theo lộ trình riêng</li>
+          <li>Theo dõi chuyển hóa từng giai đoạn</li>
+          <li>Điều chỉnh chiến lược giao tiếp chồng con</li>
+          <li>Ứng dụng Score Model trong nuôi dạy con</li>
+          <li>Tái thiết lập vai trò vợ – mẹ – lãnh đạo</li>
+          <li>Cân bằng gia đình và sự nghiệp</li>
+          <li>Định vị lại năng lượng và hình ảnh cá nhân</li>
+          <li>Ưu tiên lịch coaching riêng trong năm</li>
+          <li><b>Đặc biệt: Timeline Therapy trị giá 5.000.000đ/buổi</b></li>
+        </ul>
+        <a href="#form" class="btn btn-navy btn-block">Đăng Ký Đồng Hành 1 Năm</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMPARE ============================ -->
+<section class="sec" id="compare">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Bảng so sánh 4 gói</span>
+      <h2>So Sánh Chi Tiết Để Chọn Đúng Gói</h2>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead>
+          <tr><th>Nội dung</th><th>BASIC</th><th>PLUS</th><th>PRO</th><th>PREMIUM</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Giá</th><td class="hl">399K</td><td class="hl">1.999K</td><td class="hl">5.000.000đ</td><td class="hl">25.000.000đ/năm</td></tr>
+          <tr><th>Phù hợp với ai</th><td>Muốn nhìn lại hôn nhân</td><td>Muốn tháo gỡ sâu</td><td>Muốn đồng hành 90 ngày</td><td>Muốn đồng hành 1 năm</td></tr>
+          <tr><th>Bánh Xe Hôn Nhân</th><td>Có</td><td>Có</td><td>Có</td><td>Có</td></tr>
+          <tr><th>File PDF cá nhân</th><td>Có</td><td>Có</td><td>Có</td><td>Có</td></tr>
+          <tr><th>Coaching 1:1</th><td>Không</td><td>120 phút</td><td>03 phiên</td><td>Theo lộ trình 1 năm</td></tr>
+          <tr><th>Relationship Map</th><td>Cơ bản</td><td>Chuyên sâu</td><td>Chuyên sâu</td><td>Theo mục tiêu</td></tr>
+          <tr><th>Bản đồ cá nhân hóa chuyên sâu</th><td>Không</td><td>Không</td><td>Có</td><td>Có</td></tr>
+          <tr><th>Master NLP và EQ</th><td>Không</td><td>Có</td><td>Có</td><td>Có</td></tr>
+          <tr><th>Kế hoạch 7 ngày</th><td>Có</td><td>Có</td><td>Có</td><td>Có</td></tr>
+          <tr><th>Kế hoạch 21 ngày</th><td>Không</td><td>Có</td><td>Có</td><td>Có</td></tr>
+          <tr><th>Kế hoạch 90 ngày</th><td>Không</td><td>Có</td><td>Đồng hành thực hành 90 ngày</td><td>Có</td></tr>
+          <tr><th>Nuôi dạy con theo Score Model</th><td>Không</td><td>Cơ bản</td><td>Chuyên sâu</td><td>Chuyên sâu</td></tr>
+          <tr><th>Ghi lại buổi coaching</th><td>Không</td><td>Có</td><td>Có</td><td>Có</td></tr>
+          <tr><th>Timeline Therapy</th><td>Không</td><td>Không</td><td>Không</td><td class="hl">Có · 5.000.000đ/buổi</td></tr>
+          <tr><th>Bonus tặng kèm</th><td>Một phần</td><td>Đầy đủ</td><td>Đầy đủ</td><td>Đầy đủ</td></tr>
+          <tr><th>Mục tiêu chính</th><td>Nhìn rõ vấn đề</td><td>Tháo gỡ điểm nghẽn</td><td>Chuyển hóa 90 ngày</td><td>Chuyển hóa toàn diện 1 năm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note reveal"><b>Gợi ý chọn gói:</b> BASIC để nhìn rõ vấn đề · PLUS để tháo gỡ sâu · PRO để đồng hành 90 ngày qua 3 phiên coaching · PREMIUM để đồng hành 1 năm và tham gia quy trình trị liệu cảm xúc Timeline Therapy.</p>
+  </div>
+</section>
+
+<!-- ============================ COMMIT ============================ -->
+<section class="sec commit" id="commit">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="color:#E7CE9A">Cam kết đồng hành</span>
+      <h2>Huyền Dung Đồng Hành Như Thế Nào?</h2>
+      <p style="color:#d5c7b0">Trong coaching, Huyền Dung không đứng ở vị trí phán xét ai đúng ai sai. Tôi đồng hành để bạn nhìn rõ sự thật bên trong mối quan hệ, hiểu phần mình cần chuyển hóa và tìm ra cách giao tiếp phù hợp hơn với người thương.</p>
+    </div>
+    <ul class="commit-list">
+      <li class="reveal"><span class="commit-check">✓</span> Bảo mật tuyệt đối thông tin cá nhân và câu chuyện gia đình.</li>
+      <li class="reveal"><span class="commit-check">✓</span> Không phán xét, không áp đặt, không ép bạn phải lựa chọn theo ý ai.</li>
+      <li class="reveal"><span class="commit-check">✓</span> Tôn trọng tốc độ chuyển hóa của từng người.</li>
+      <li class="reveal"><span class="commit-check">✓</span> Làm việc trên dữ liệu, bản đồ, cảm xúc và hành động cụ thể.</li>
+      <li class="reveal"><span class="commit-check">✓</span> Sau buổi coaching, bạn có lộ trình rõ để biết mình cần làm gì tiếp theo.</li>
+    </ul>
+    <p class="commit-final reveal">Đừng để một người phụ nữ quản trị được doanh nghiệp triệu đô phải đầu hàng trước hạnh phúc của chính mình.</p>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="sec" id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Câu hỏi thường gặp</span>
+      <h2>Những Điều Bạn Đang Băn Khoăn</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal"><button class="faq-q">Coaching khác gì tư vấn tâm lý?<span class="faq-icon"></span></button><div class="faq-a"><p>Coaching không tập trung vào chẩn đoán bệnh lý. Coaching giúp bạn nhìn rõ hiện trạng, nhận diện điểm nghẽn, đặt mục tiêu và xây lộ trình hành động cụ thể. Nếu vấn đề thuộc nhóm sang chấn hoặc rối loạn tâm lý nghiêm trọng, bạn nên kết hợp thêm chuyên gia tâm lý hoặc bác sĩ phù hợp.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Nếu chồng tôi không chịu tham gia thì sao?<span class="faq-icon"></span></button><div class="faq-a"><p>Bạn vẫn có thể bắt đầu. Khi một người trong hệ gia đình thay đổi cách nhìn, cách nói, cách phản ứng và cách đặt ranh giới, toàn bộ mối quan hệ có thể dịch chuyển. Coaching bắt đầu từ người sẵn sàng nhất.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Tôi cần chuẩn bị gì trước buổi coaching?<span class="faq-icon"></span></button><div class="faq-a"><p>Bạn chỉ cần chuẩn bị tinh thần trung thực với chính mình. Nếu có thể, hãy ghi lại vài tình huống gần đây khiến bạn tổn thương, tức giận, bất lực hoặc mất kết nối với chồng con.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Các buổi coaching có được bảo mật không?<span class="faq-icon"></span></button><div class="faq-a"><p>Có. Tất cả thông tin cá nhân, câu chuyện gia đình và nội dung trao đổi trong buổi coaching đều được bảo mật.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Cần bao nhiêu buổi thì thấy chuyển biến?<span class="faq-icon"></span></button><div class="faq-a"><p>Một buổi coaching sâu có thể giúp bạn nhìn rõ vấn đề và biết hướng đi tiếp theo. Để thay đổi mô thức giao tiếp, cảm xúc và thói quen trong gia đình, bạn nên có lộ trình tối thiểu 21 đến 90 ngày.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Tôi đang cân nhắc ly thân hoặc ly hôn, chương trình có phù hợp không?<span class="faq-icon"></span></button><div class="faq-a"><p>Có, nếu bạn vẫn muốn nhìn lại mối quan hệ một cách tỉnh táo trước khi đưa ra quyết định lớn. Coaching không ép bạn giữ hay buông, mà giúp bạn hiểu rõ lựa chọn nào là trưởng thành nhất.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Timeline Therapy trong gói Premium là gì?<span class="faq-icon"></span></button><div class="faq-a"><p>Đây là quy trình trị liệu cảm xúc giúp làm việc với những cảm xúc mắc kẹt, tổn thương cũ và các phản ứng lặp lại. Trong gói Premium, khách hàng được tham gia quy trình này như một phần đặc biệt của hành trình đồng hành.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Tôi nên chọn gói nào?<span class="faq-icon"></span></button><div class="faq-a"><p>Nếu bạn mới bắt đầu, hãy chọn BASIC. Nếu bạn đang có vấn đề rõ và muốn tháo gỡ sâu, hãy chọn PLUS. Nếu muốn thực hành 90 ngày, hãy chọn PRO. Nếu muốn đồng hành dài hạn và có Timeline Therapy, hãy chọn PREMIUM.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="sec final-cta" id="cta">
+  <div class="container">
+    <span class="eyebrow reveal">Bắt đầu hành trình</span>
+    <h2 class="reveal">Sẵn Sàng Nhìn Lại Hôn Nhân Của Bạn Bằng Một Tấm Bản Đồ Rõ Ràng Hơn?</h2>
+    <p class="reveal">Bạn không cần phải tiếp tục gồng một mình. Chỉ cần một buổi tư vấn miễn phí 30 phút, bạn có thể bắt đầu nhìn lại điều gì đang thật sự xảy ra trong hôn nhân, và đâu là bước đầu tiên để khôi phục kết nối trong gia đình.</p>
+    <div class="hero-cta reveal">
+      <a href="#form" class="btn btn-primary">Đặt lịch tư vấn miễn phí 30 phút</a>
+      <a href="https://zalo.me/0377266588" target="_blank" rel="noopener" class="btn btn-ghost">Nhắn Zalo cho Huyền Dung</a>
+    </div>
+    <div class="trust-line reveal" style="justify-content:center;margin-top:22px">
+      <span>Bảo mật thông tin</span><span>Phản hồi qua Zalo trong 24h</span><span>Chỉ nhận số lượng giới hạn khách 1:1 mỗi tháng</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo"><b style="font-family:var(--font-head);font-size:20px">LÊ HUYỀN DUNG</b><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-family:var(--font-cta);font-weight:600">Người Giữ Lửa Hôn Nhân</span></div>
+        <p class="tagline">Tái sinh · Chân thành · Truyền cảm hứng</p>
+        <p>Master Coach Lê Huyền Dung đồng hành cùng phụ nữ thành đạt tái cấu trúc hôn nhân, kết nối lại với chồng con và giữ vững bản lĩnh trong dịu dàng.</p>
+      </div>
+      <div>
+        <h4>Khám phá</h4>
+        <a class="fl" href="#values">Giá trị nhận được</a>
+        <a class="fl" href="#about">Về Master Coach</a>
+        <a class="fl" href="#pricing">Gói Coaching</a>
+        <a class="fl" href="#compare">So sánh gói</a>
+        <a class="fl" href="#faq">Câu hỏi thường gặp</a>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <a class="fl" href="tel:0377266588">Zalo / SĐT: 0377 266 588</a>
+        <a class="fl" href="mailto:huyendungmastercoach@gmail.com">huyendungmastercoach@gmail.com</a>
+        <a class="fl" href="#form">Đặt lịch tư vấn miễn phí</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><b>Chính sách bảo mật:</b> Thông tin cá nhân của bạn được bảo mật tuyệt đối và chỉ dùng cho mục đích tư vấn, đồng hành coaching.</p>
+      <p style="margin-top:8px">Coaching trong chương trình này được sử dụng như một phương pháp phát triển bản thân, thấu hiểu mối quan hệ và xây dựng hành động cụ thể. Kết quả phụ thuộc vào mức độ cam kết, trung thực và thực hành của mỗi cá nhân.</p>
+      <p style="margin-top:12px">© 2026 Master Coach Lê Huyền Dung. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ ZALO FLOAT ============================ -->
+<a href="https://zalo.me/0377266588" target="_blank" rel="noopener" class="zalo-float" aria-label="Nhắn Zalo">Zalo</a>
+
+<!-- ============================ MOBILE STICKY CTA ============================ -->
+<div class="msticky">
+  <a href="tel:0377266588" class="btn btn-ghost">Gọi ngay</a>
+  <a href="#form" class="btn btn-primary">Đặt lịch miễn phí</a>
+</div>
+
+<script>
+/* ---- Fade up on scroll ---- */
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+
+/* ---- FAQ accordion ---- */
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.closest('.faq-item');
+    var ans = item.querySelector('.faq-a');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(o){
+      o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){ item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+  });
+});
+
+/* ---- Mobile nav toggle ---- */
+var burger = document.getElementById('burger');
+var mnav = document.getElementById('mobileNav');
+if(burger){ burger.addEventListener('click', function(){ mnav.classList.toggle('open'); }); }
+document.querySelectorAll('#mobileNav a').forEach(function(a){ a.addEventListener('click', function(){ mnav.classList.remove('open'); }); });
+
+/* ---- Form submit (demo) ---- */
+var form = document.getElementById('bookForm');
+if(form){
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name');
+    var phone = document.getElementById('f-phone');
+    if(!name.value.trim() || !phone.value.trim()){
+      if(!name.value.trim()){ name.focus(); } else { phone.focus(); }
+      return;
+    }
+    document.getElementById('formOk').style.display = 'block';
+    form.querySelector('button[type=submit]').textContent = 'Đã gửi thành công ✓';
+    /* TODO: gắn endpoint thật (Google Form / CRM) + sự kiện Lead của Meta Pixel tại đây */
+  });
+}
+</script>
+</body>
+</html>
