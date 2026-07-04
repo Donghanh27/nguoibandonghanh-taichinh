@@ -554,6 +554,57 @@ table.compare td.hl { color: var(--gold-2); font-weight: 700; }
 .mobile-nav a { padding: 11px 0; font-size: 15px; color: var(--ink-soft); border-bottom: 1px solid var(--line); }
 .mobile-nav .btn { margin-top: 12px; }
 </style>
+
+<script>
+/* ============================================================
+   ⚙️ Ô CẤU HÌNH — CHỈ CẦN CHỈNH Ở ĐÂY (không cần đụng phần khác)
+   ============================================================ */
+window.LP_CONFIG = {
+  phone: '0377266588',
+  zalo:  '0377266588',
+  email: 'huyendungmastercoach@gmail.com',
+
+  /* (Tùy chọn) Nơi nhận thông tin khách khi bấm "Đặt lịch".
+     - Dễ nhất: tạo form Formspree miễn phí -> dán link dạng https://formspree.io/f/xxxxxx
+     - Hoặc dán URL Google Apps Script Web App.
+     - Để trống: form sẽ tự mở email soạn sẵn gửi về địa chỉ 'email' ở trên. */
+  leadEndpoint: '',
+
+  /* (Tùy chọn) Meta (Facebook) Pixel ID — ví dụ: '1234567890123456' */
+  metaPixelId: '',
+
+  /* (Tùy chọn) Google Analytics 4 ID — ví dụ: 'G-XXXXXXXXXX' */
+  gaId: ''
+};
+
+(function(){
+  var c = window.LP_CONFIG || {};
+  /* Google Analytics 4 */
+  if (c.gaId && c.gaId.indexOf('G-') === 0) {
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + c.gaId;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', c.gaId);
+  }
+  /* Meta (Facebook) Pixel */
+  if (c.metaPixelId && /^[0-9]{6,}$/.test(c.metaPixelId)) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', c.metaPixelId); fbq('track', 'PageView');
+  }
+})();
+
+/* Bắn sự kiện chuyển đổi tới cả Meta Pixel và GA4 (an toàn khi chưa cấu hình) */
+window.lpTrack = function(name, params){
+  try { if (window.fbq)  fbq('track', name, params || {}); } catch(e){}
+  try { if (window.gtag) gtag('event', name, params || {}); } catch(e){}
+};
+</script>
 </head>
 <body>
 
@@ -1117,22 +1168,68 @@ var mnav = document.getElementById('mobileNav');
 if(burger){ burger.addEventListener('click', function(){ mnav.classList.toggle('open'); }); }
 document.querySelectorAll('#mobileNav a').forEach(function(a){ a.addEventListener('click', function(){ mnav.classList.remove('open'); }); });
 
-/* ---- Form submit (demo) ---- */
+/* ---- Form đặt lịch ---- */
 var form = document.getElementById('bookForm');
 if(form){
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    var cfg  = window.LP_CONFIG || {};
     var name = document.getElementById('f-name');
-    var phone = document.getElementById('f-phone');
-    if(!name.value.trim() || !phone.value.trim()){
-      if(!name.value.trim()){ name.focus(); } else { phone.focus(); }
-      return;
+    var phone= document.getElementById('f-phone');
+    if(!name.value.trim()){ name.focus(); return; }
+    if(!phone.value.trim()){ phone.focus(); return; }
+
+    var data = {
+      name:     name.value.trim(),
+      phone:    phone.value.trim(),
+      email:    (document.getElementById('f-email')||{}).value || '',
+      interest: (document.getElementById('f-interest')||{}).value || '',
+      status:   (document.getElementById('f-status')||{}).value || '',
+      source:   location.href
+    };
+    var btn = form.querySelector('button[type=submit]');
+    var ok  = document.getElementById('formOk');
+
+    /* Sự kiện chuyển đổi cho quảng cáo */
+    if(window.lpTrack) lpTrack('Lead', { content_name: 'Đặt lịch tư vấn 30 phút' });
+
+    function showSuccess(){
+      ok.style.display = 'block';
+      btn.textContent = 'Đã gửi thành công ✓';
+      btn.disabled = true;
+      form.reset();
     }
-    document.getElementById('formOk').style.display = 'block';
-    form.querySelector('button[type=submit]').textContent = 'Đã gửi thành công ✓';
-    /* TODO: gắn endpoint thật (Google Form / CRM) + sự kiện Lead của Meta Pixel tại đây */
+    function fallbackMail(){
+      var subj = encodeURIComponent('Đặt lịch tư vấn - ' + data.name);
+      var body = encodeURIComponent(
+        'Họ và tên: ' + data.name + '\n' +
+        'SĐT/Zalo: '  + data.phone + '\n' +
+        'Email: '     + data.email + '\n' +
+        'Quan tâm: '  + data.interest + '\n' +
+        'Tình trạng: '+ data.status + '\n\n' +
+        'Gửi từ: '    + data.source);
+      window.location.href = 'mailto:' + (cfg.email || '') + '?subject=' + subj + '&body=' + body;
+    }
+
+    if(cfg.leadEndpoint){
+      var fd = new FormData();
+      Object.keys(data).forEach(function(k){ fd.append(k, data[k]); });
+      btn.textContent = 'Đang gửi...';
+      fetch(cfg.leadEndpoint, { method:'POST', body: fd, headers:{ 'Accept':'application/json' } })
+        .then(function(){ showSuccess(); })
+        .catch(function(){ fallbackMail(); showSuccess(); });
+    } else {
+      /* Chưa cấu hình endpoint: mở email soạn sẵn để không mất khách */
+      fallbackMail();
+      showSuccess();
+    }
   });
 }
+
+/* ---- Sự kiện Contact khi bấm Zalo hoặc gọi điện ---- */
+document.querySelectorAll('a[href^="tel:"], a[href*="zalo.me"]').forEach(function(a){
+  a.addEventListener('click', function(){ if(window.lpTrack) lpTrack('Contact'); });
+});
 </script>
 </body>
 </html>
